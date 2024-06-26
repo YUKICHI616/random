@@ -56,6 +56,13 @@
         function generateNumber() {
             const randomNumber = Math.floor(Math.random() * 100) + 1;
             document.getElementById('result').textContent = randomNumber;
+       
+        // 生成連結
+            const baseUrl = "https://dcode.tw/stick/detail/3/"; // 替換成你想要的基礎URL
+            const fullUrl = baseUrl + randomNumber;
+            const linkElement = document.getElementById('link');
+            linkElement.innerHTML = `<a href="${fullUrl}" target="_blank">查看數字 ${randomNumber} 的詳情</a>`;
+        }
         }
     </script>
 </body>
