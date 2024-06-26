@@ -42,6 +42,9 @@
         button:hover {
             background-color: #0056b3;
         }
+        #link {
+            margin-top: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -50,14 +53,15 @@
         <p>點擊按鈕生成1-100之間的隨機數字</p>
         <div id="result">-</div>
         <button onclick="generateNumber()">生成隨機數字</button>
+        <div id="link"></div>
     </div>
 
     <script>
         function generateNumber() {
             const randomNumber = Math.floor(Math.random() * 100) + 1;
             document.getElementById('result').textContent = randomNumber;
-       
-        // 生成連結
+            
+            // 生成連結
             const baseUrl = "https://dcode.tw/stick/detail/3/"; // 替換成你想要的基礎URL
             const fullUrl = baseUrl + randomNumber;
             const linkElement = document.getElementById('link');
